@@ -8,20 +8,18 @@ exports.getItems = async (query, offset = 0, limit = 50) => {
     });
     return response.data;
   } catch (error) {
-    console.error("Error en getItems:", error.message); // Agrega logs para depuración
-    throw error; // Asegúrate de propagar el error
+    console.error("Error en getItems:", error.message); 
+    throw error;
   }
 };
 
 exports.getItemDetails = async (id) => {
   try {
-    // Obtener item y descripción en paralelo
     const [itemResponse, descriptionResponse] = await Promise.all([
       axios.get(`${config.baseUrl}/items/${id}`),
       axios.get(`${config.baseUrl}/items/${id}/description`),
     ]);
 
-    // Usar el category_id para obtener el categoryResponse
     const categoryResponse = await axios.get(
       `${config.baseUrl}/categories/${itemResponse.data.category_id}`
     );

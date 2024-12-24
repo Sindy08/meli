@@ -1,0 +1,13 @@
+.loading {
+  background-color: white;
+  padding: 25px;
+  border-radius: 3px;
+  margin: 30px auto;
+  justify-content: center;
+  height: 87vh;
+  align-items: center;
+  &__text {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.55);
+  }
+}

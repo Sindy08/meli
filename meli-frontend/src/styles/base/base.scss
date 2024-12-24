@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Proxima Nova", sans-serif;
+  margin: 0;
+  scrollbar-width: thin;
+  background-color: #EBEBEB;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 27px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+button {
+  font-family: "Proxima Nova", sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+input::placeholder {
+  font-family: "Proxima Nova", sans-serif;
+  opacity: 1;
+}
+
+input:focus-visible,
+ul {
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+:disabled {
+  pointer-events: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.untitled {
+  display: none;
+}
